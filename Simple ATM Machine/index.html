@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="atm-container">
+        <h1>ATM Machine</h1>
+
+        <!-- PIN Section -->
+        <div class="atm-section" id="pin-section">
+            <h2>Enter PIN</h2>
+            <input type="password" id="pin-input" placeholder="4-digit PIN">
+            <button id="pin-submit">Submit PIN</button>
+            <p id="pin-message" class="message"></p>
+        </div>
+
+        <!-- Options Section -->
+        <div class="atm-section" id="options-section" style="display: none;">
+            <h2>Select Action</h2>
+            <button onclick="checkBalance()">Check Balance</button>
+            <button onclick="showWithdraw()">Withdraw</button>
+            <button onclick="showDeposit()">Deposit</button>
+        </div>
+
+        <!-- Action Section -->
+        <div class="atm-section" id="action-section" style="display: none;">
+            <h2 id="action-title"></h2>
+            <input type="number" id="action-input" placeholder="Enter Amount">
+            <button id="action-submit">Submit</button>
+            <p id="action-message" class="message"></p>
+        </div>
+
+        <!-- Balance Display -->
+        <div class="atm-section" id="balance-section">
+            <p id="balance-display">Balance: $0</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
